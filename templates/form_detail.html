@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <table class="table table-bordered">
+    <h2>Personal details</h2>
+    <thead>
+      <tr>
+        <th scope="col">Fullname</th>
+        <th scope="col">Email Address</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Age</th>
+        <th scope="col">Aadhar Number</th>
+        <th scope="col">Marital Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.Fullname }}</td>
+        <td>{{ object.Email_Address }}</td>
+        <td>{{ object.Gender }}</td>
+        <td>{{ object.Date_of_birth }}</td>
+        <td>{{ object.Age }}</td>
+        <td>{{ object.Aadhar_number }}</td>
+        <td>{{ object.Marital_status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Father Name</th>
+        <th scope="col">Father Job</th>
+        <th scope="col">Father Number</th>
+        <th scope="col">Mother Name</th>
+        <th scope="col">Mother Job</th>
+        <th scope="col">Guardian Name</th>
+        <th scope="col">Ph Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.Father_name }}</td>
+        <td>{{ object.Father_occupation }}</td>
+        <td>{{ object.Father_number }}</td>
+        <td>{{ object.Mother_name }}</td>
+        <td>{{ object.Mother_occupation }}</td>
+        <td>{{ object.Guardian_name }}</td>
+        <td>{{ object.Mobile_number }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Guardian Job</th>
+        <th scope="col">Address 1</th>
+        <th scope="col">Address 2</th>
+        <th scope="col">City</th>
+        <th scope="col">District</th>
+        <th scope="col">Zipcode</th>
+        <th scope="col">Income/yr</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.Guardian_ocuupation }}</td>
+        <td>{{ object.Address_1 }}</td>
+        <td>{{ object.Address_2 }}</td>
+        <td>{{ object.City }}</td>
+        <td>{{ object.District }}</td>
+        <td>{{ object.zipcode }}</td>
+        <td>{{ object.Annual_income }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Caste</th>
+        <th scope="col">community</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.Caste }}</td>
+        <td>{{ object.Community }}</td>
+      </tr>
+    </tbody> 
+    
+  </table>
+<br/>
+  <table class="table table-bordered">
+    <h2>Academic details</h2>
+    <thead>
+      <tr>
+        <th scope="col">Degree</th>
+        <th scope="col">Specialisation</th>
+        <th scope="col">Roll Number</th>
+        <th scope="col">10<sup>th</sup> Mark</th>
+        <th scope="col">12<sup>th</sup> Mark</th>
+        <th scope="col">Education Mode</th>
+        <th scope="col">Scholarship</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.course_pursuing }}</td>
+        <td>{{ object.specialization }}</td>
+        <td>{{ object.roll_number }}</td>
+        <td>{{ object.mark_in_higher_school }}</td>
+        <td>{{ object.mark_in_secondary_school }}</td>
+        <td>{{ object.Education_mode }}</td>
+        <td>{{ object.scholarship }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Mention Scholarship</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.mention_scholarship }}</td>
+      </tr>
+    </tbody>
+    
+  </table>
+  <br/>
+  <table class="table table-bordered">
+    <h2>Other details</h2>
+    <thead>
+      <tr>
+        <th scope="col">Disability</th>
+        <th scope="col">Mention Disability</th>
+        <th scope="col">Applied as</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">{{ object.disability }}</td>
+        <td>{{ object.mention }}</td>
+        <td>{{ object.applying_for }}</td>
+        <td>{{ object.created_at }}</td>
+        <td>{{ object.updated_at }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><a href="#">Edit</a> |
+    <a href="#}">Delete</a></p>
+  <p>Back to <a href="{% url 'form_list' %}">All forms</a>.</p>
+{% endblock content %}

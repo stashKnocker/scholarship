@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block title %}Scholarships{% endblock title %}
+
+{% block content %}
+
+  {% for Personal_detail in object_list %}
+  {% if Personal_detail.applying_for == 'Student' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+          <h4>List of Available Scholarships for Students.</h4>
+          <hr />
+          <ul>
+              <li><h5><a href="#">Pre-matric scholarship scheme</a></h5></li>
+              <li><h5><a href="#">Post-matric scholarship scheme</a></h5></li>
+              <li><h5><a href="#">AICTE saksham scholarship scheme</a></h5></li>
+          </ul>
+      </div>
+      <div class="card-footer text-center text-muted">
+        <a href="{% url 'form_detail' Personal_detail.pk %}">View Form</a> | <a href="{% url 'form_edit' Personal_detail.pk %}">Edit Form</a> | <a href="{% url 'form_delete' Personal_detail.pk %}">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% elif Personal_detail.applying_for == 'Widow' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+        <h4>List of Available Scholarships for Widows.</h4>
+        <hr />
+        <ul>
+            <li><h5><a href="#"> Pension plan of Rs.300 per month</a></h5></li>
+        </ul>
+    </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">View Form</a> | <a href="#">Edit Form</a> | <a href="#">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% elif Personal_detail.applying_for == 'Senior Citizen' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+        <h4>List of Available Scholarships for Senior Citizens.</h4>
+        <hr />
+        <ul>
+            <li><h5><a href="#">Rashtriya Vayoshri Yojna</a></h5></li>
+            <li><h5><a href="#">Pradhan Mantri Vaya Vandana Yojana</a></h5></li>
+            <li><h5><a href="#">National Programme for Healthcare of the Elderly</a></h5></li>
+        </ul>
+    </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">View Form</a> | <a href="#">Edit Form</a> | <a href="#">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% elif Personal_detail.applying_for == 'Disability' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+        <h4>List of Available Scholarships for Disabilities.</h4>
+        <hr />
+        <ul>
+            <li><h5><a href="#">National Handicapped Finance and Development Corporation Plan</a></h5></li>
+            <li><h5><a href="#">Dendayal Disabled Rehabilitation Scheme</a></h5></li>
+            <li><h5><a href="#"> Indira Awaara Yojna Scheme for National Awards for the Empowerment of Person with Disability</a></h5></li>
+        </ul>
+    </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">View Form</a> | <a href="#">Edit Form</a> | <a href="#">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% elif Personal_detail.applying_for == 'Marriage' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+        <h4>List of Available Scholarships for Married.</h4>
+        <hr />
+        <ul>
+            <li><h5><a href="#">Muthu Lakshmi Reddy Nenaivu Intercaste-Marriage Assistance scheme</a></h5></li>
+        </ul>
+    </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">View Form</a> | <a href="#">Edit Form</a> | <a href="#">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% elif Personal_detail.applying_for == 'Caste' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+        <h4>List of Available Scholarships for Caste.</h4>
+        <hr />
+        <ul>
+            <li><h5><a href="#">NSP</a></h5></li>
+        </ul>
+    </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">View Form</a> | <a href="#">Edit Form</a> | <a href="#">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% elif Personal_detail.applying_for == 'BPL' %}
+    <div class="card">
+      <div class="card-header">
+        <span class="font-weight-bold">{{ Personal_detail.applying_for }}</span> &middot;
+        <span class="text-muted">by {{ Personal_detail.Fullname }} |
+        {{ Personal_detail.created_at }}</span>
+      </div>
+      <div class="card-body">
+        <h4>List of Available Scholarships for BPL.</h4>
+        <hr />
+        <ul>
+            <li><h5><a href="#">Pradhan Mantri Jan Dhan Yojana</a></h5></li>
+            <li><h5><a href="#">Pradhan Mantri Jeevan Jyoti Bina Yojana</a></h5></li>
+            <li><h5><a href="#">Pradhan Mantri Suraksha Bima Yojana</a></h5></li>
+        </ul>
+    </div>
+      <div class="card-footer text-center text-muted">
+        <a href="#">View Form</a> | <a href="#">Edit Form</a> | <a href="#">Delete Form</a>
+      </div>
+    </div>
+    <br />
+    {% endif %}
+    {% endfor %}
+    
+{% endblock content %}
