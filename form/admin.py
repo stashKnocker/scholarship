@@ -10,7 +10,7 @@ class Personal_detail_Admin(admin.ModelAdmin):
     list_display = ['owner','Fullname', 'Aadhar_number', 'Date_of_birth', 'Father_name', 'District', 'roll_number', 'applying_for']
     model = Personal_detail
     last_filter = ['Fullname', 'Aadhar_number']
-    search_fields = ['Fullname', 'Aadhar_number']
+    search_fields = ['Fullname', 'Aadhar_number', 'applying_for']
 
 
 
